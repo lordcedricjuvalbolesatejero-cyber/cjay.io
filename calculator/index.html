@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A sleek, modern dual-screen calculator with big display and side panel." />
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-wrapper">
+      <h1 class="app-title">CALC<span>PRO</span></h1>
+
+      <div class="calculator">
+
+        <!-- MAIN PANEL: big screen + numpad -->
+        <div class="main-panel">
+          <div class="big-screen" id="bigScreen">
+            <div class="expression-hint" id="expressionHint"></div>
+            <div class="big-display" id="bigDisplay">0</div>
+          </div>
+
+          <div class="numpad">
+            <!-- Row 1: functions -->
+            <button class="btn btn-func" id="btn-percent"  data-value="%">%</button>
+            <button class="btn btn-func" id="btn-plusminus" data-value="±">±</button>
+            <button class="btn btn-func" id="btn-sqrt"    data-value="√">√</button>
+            <button class="btn btn-op"   id="btn-divide"  data-value="÷">÷</button>
+
+            <!-- Row 2 -->
+            <button class="btn btn-num" id="btn-7" data-value="7">7</button>
+            <button class="btn btn-num" id="btn-8" data-value="8">8</button>
+            <button class="btn btn-num" id="btn-9" data-value="9">9</button>
+            <button class="btn btn-op"  id="btn-multiply" data-value="×">×</button>
+
+            <!-- Row 3 -->
+            <button class="btn btn-num" id="btn-4" data-value="4">4</button>
+            <button class="btn btn-num" id="btn-5" data-value="5">5</button>
+            <button class="btn btn-num" id="btn-6" data-value="6">6</button>
+            <button class="btn btn-op"  id="btn-subtract" data-value="−">−</button>
+
+            <!-- Row 4 -->
+            <button class="btn btn-num" id="btn-1" data-value="1">1</button>
+            <button class="btn btn-num" id="btn-2" data-value="2">2</button>
+            <button class="btn btn-num" id="btn-3" data-value="3">3</button>
+            <button class="btn btn-op"  id="btn-add" data-value="+">+</button>
+
+            <!-- Row 5 -->
+            <button class="btn btn-num btn-zero" id="btn-0"   data-value="0">0</button>
+            <button class="btn btn-num"          id="btn-dot"  data-value=".">.</button>
+            <button class="btn btn-equal"        id="btn-equal" data-value="=">=</button>
+          </div>
+        </div>
+
+        <!-- SIDE PANEL: small screen + AC + C -->
+        <div class="side-panel">
+          <div class="small-screen" id="smallScreen">
+            <div class="small-label">OP</div>
+            <div class="small-display" id="smallDisplay">—</div>
+          </div>
+
+          <button class="btn btn-ac" id="btn-ac">AC</button>
+          <button class="btn btn-c"  id="btn-c">C</button>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
